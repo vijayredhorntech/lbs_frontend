@@ -1,28 +1,26 @@
 @extends('Layouts.layout')
 @section('content')
-    <div class="w-full flex flex-col items-center lg:pt-[200px] md:pt-[200px] pt-[100px] relative pb-4 px-4">
-        <img class=" lg:h-[300px] md:h-[300px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
+    <div class="w-full flex flex-col items-center lg:pt-[220px] md:pt-[220px] pt-[140px] relative pb-4 px-4">
+        <img class=" lg:h-[200px] md:h-[200px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
              src="{{asset('assets/images/administration/campus.jpg')}}">
-        <div class="w-full lg:h-[300px] md:h-[300px] h-[120px]   bg-black/60 absolute top-0 left-0 z-10">
+        <div class="w-full lg:h-[200px] md:h-[200px] h-[120px]   bg-black/20 absolute top-0 left-0 z-10">
         </div>
-        <div class="lg:w-[80%] w-full z-20 flex flex-col-reverse gap-4">
-            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-2 ">
-
-
-                <div class="w-full flex flex-col rounded-md">
+        <div class="lg:w-[80%] w-full z-20 flex flex-col-reverse ">
+            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-6 ">
+                <div class="w-full flex flex-col bg-white h-max px-4 py-6 shadow-lg shadow-black/20">
                     <div
-                        class="w-full bg-darkTheme flex lg:justify-center md:justify-center justify-between lg:p-3 md:p-3 p-2 rounded-t-md">
-                        <span class="font-semibold lg:text-xl md:text-xl text-md text-white">CONTENT</span>
+                        class="w-full  flex lg:justify-start md:justify-start justify-between px-2  border-b-[1px] border-b-black/20">
+                        <span class="font-semibold lg:text-xl md:text-xl text-md text-black mb-2">ABOUT COLLEGE</span>
                         <button class="bg-white text-darkTheme px-2 rounded-sm lg:hidden md:hidden block"
                                 onclick=" document.getElementById('aboutCollegeTab').classList.toggle('hidden') ">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
-                    <div id="aboutCollegeTab" class="w-full lg:flex md:flex hidden flex-col">
+                    <div id="aboutCollegeTab" class="w-full lg:flex md:flex hidden flex-col mt-4">
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'THE-COLLEGE'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='THE-COLLEGE'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='THE-COLLEGE'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>THE COLLEGE</span>
                                     @if($type==='THE-COLLEGE')
                                         <i class="fa fa-angles-right"></i>
@@ -33,7 +31,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'PRINCIPAL-MESSAGE'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='PRINCIPAL-MESSAGE'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='PRINCIPAL-MESSAGE'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>PRINCIPAL MESSAGE</span>
                                     @if($type==='PRINCIPAL-MESSAGE')
                                         <i class="fa fa-angles-right"></i>
@@ -44,7 +42,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'VISION-MISSION'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='VISION-MISSION'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='VISION-MISSION'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>VISION MISSION</span>
                                     @if($type==='VISION-MISSION')
                                         <i class="fa fa-angles-right"></i>
@@ -55,7 +53,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'CODE-OF-CONDUCT'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='CODE-OF-CONDUCT'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='CODE-OF-CONDUCT'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>CODE OF CONDUCT</span>
                                     @if($type==='CODE-OF-CONDUCT')
                                         <i class="fa fa-angles-right"></i>
@@ -66,7 +64,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['folder'=>'about','file'=>'1.2.1 AFFILIATION LETTERS 23-24', 'type'=>'AFFILIATING-UNIVERSITY'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='AFFILIATING-UNIVERSITY'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='AFFILIATING-UNIVERSITY'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>AFFILIATING UNIVERSITY</span>
                                     @if($type==='AFFILIATING-UNIVERSITY')
                                         <i class="fa fa-angles-right"></i>
@@ -77,7 +75,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'ANTI-RAGGING-POLICY'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ANTI-RAGGING-POLICY'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ANTI-RAGGING-POLICY'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>ANTI RAGGING POLICY</span>
                                     @if($type==='ANTI-RAGGING-POLICY')
                                         <i class="fa fa-angles-right"></i>
@@ -88,7 +86,7 @@
                         <div class="w-full">
                             <a href="{{route('aboutCollege',['type'=>'RTI-STATUTORY-DECLARATION'])}}">
                                 <div
-                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='RTI-STATUTORY-DECLARATION'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                    class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='RTI-STATUTORY-DECLARATION'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>RTI STATUTORY DECLARATION</span>
                                     @if($type==='RTI-STATUTORY-DECLARATION')
                                         <i class="fa fa-angles-right"></i>
@@ -103,7 +101,7 @@
                         <div class="w-full ">
                             <a href="javascript:void(0)"
                                onclick="document.getElementById('committeMenu').classList.toggle('hidden')">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='ICC'?'text-darkTheme bg-white border-b-[1px] border-b-darkTheme':'text-black bg-lightTheme'}} border-b-[1px] border-b-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='ICC'?'text-darkTheme bg-white border-b-[1px] border-b-darkTheme':'bg-black/10'}} border-b-[1px] border-b-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                          COMMITTEE
                                         </span>
@@ -114,7 +112,7 @@
                         <div id="committeMenu" class="w-full rounded-t-md  flex flex-col hidden ">
                             <div class="w-full">
                                 <a href="{{route('aboutCollege',['type'=>'ICC'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='ICC'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='ICC'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black text-sm font-medium transition-colors duration-200">
                                 <span>
                                 <i class="fa fa-circle mr-1 text-[10px]"></i>
 
@@ -130,7 +128,7 @@
                             </div>
                             <div class="w-full">
                                 <a href="{{route('aboutCollege',['type'=>'Women-Redressal'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='Women-Redressal'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='Women-Redressal'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black text-sm font-medium transition-colors duration-200">
                                 <span>
                                                                     <i class="fa fa-circle mr-1 text-[10px]"></i>
 
@@ -146,7 +144,7 @@
                             </div>
                             <div class="w-full">
                                 <a href="{{route('aboutCollege',['type'=>'Students-Complaint'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='Students-Complaint'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm rounded-b-md font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='Students-Complaint'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black text-sm rounded-b-md font-medium transition-colors duration-200">
                                 <span>
                                                                     <i class="fa fa-circle mr-1 text-[10px]"></i>
 
@@ -169,9 +167,8 @@
                 </div>
 
 
-                <div
-                    class="w-full h-max flex flex-col lg:col-span-3 md:col-span-2 shadow-lg shadow-black/30 border-[1px] border-white rounded-md overflow-x-auto bg-white">
-                    <div class="w-full bg-white p-4 rounded-b-md h-max">
+                <div class="w-full h-max flex flex-col lg:col-span-3 md:col-span-2  border-[1px] border-white overflow-x-auto bg-white shadow-lg shadow-black/40">
+                    <div class="w-full bg-white p-6  h-max">
                         @if($type==='THE-COLLEGE')
                             <div class="w-full">
 
@@ -239,13 +236,13 @@
                                     </div>
                                     <span class="text-darkText font-bold">Dr. PP Chauhan PhD</span>
                                     <span class="text-darkText font-normla italic">Principal</span>
-                                    <span class="text-darkText font-semibold text-xs">L.B.S Govt. College Saraswati Nagar</span>
+                                    <span class="text-darkText font-medium text-xs">L.B.S Govt. College Saraswati Nagar</span>
                                 </div>
 
                                 <div
                                     class="w-full flex flex-col gap-4 lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 px-4 text-justify">
 
-                                    <span class="text-darkText font-semibold text-2xl">Principal Message</span>
+                                    <span class="text-darkText font-medium text-2xl">Principal Message</span>
                                     <span class="text-darkText italic text-md">A momentum has been created to strengthen the frame of educational arena by following a focused approach on curriculum expansion and gearing up developmental activities in the college. As educated minds have to face challenges in the global market therefore multifarious events towards personality development have been kept in mind by the dedicated staff members who deserve due appreciation and felicitation for their contribution.
 I acknowledge the whole hearted support of all the parents and well wishers without whose help any achievement would have not been possible.This is my considered opinion that a joint responsibility of the parents and teachers can guide the students to best of their destinations..
 The future is in the hands of present. It is said that destiny of a nation is shaped in the classroom. So let us work together towards creating a better tomorrow. May almighty bless us all.</span>
@@ -749,7 +746,7 @@ The future is in the hands of present. It is said that destiny of a nation is sh
                                                                 <tr class="border-[1px] border-darkTheme">
                                                                     <td class="px-4 py-3 text-md text-black font-bold whitespace-nowrap border-[1px] border-darkTheme">{{ $index + 1 }}</td>
                                                                     <td class="px-4 py-3 text-md whitespace-nowrap border-[1px] border-darkTheme">
-                                                                        <h2 class="text-md font-semibold text-black">{{ $data[0] }}</h2>
+                                                                        <h2 class="text-md font-medium text-black">{{ $data[0] }}</h2>
                                                                     </td>
                                                                     <td class="px-4 py-3 text-md text-gray-500 dark:text-gray-300 whitespace-nowrap border-[1px] border-darkTheme">
                                                                         <h2 class="text-md font-normal italic text-black">{{ $data[1] }}</h2>
@@ -811,7 +808,7 @@ The future is in the hands of present. It is said that destiny of a nation is sh
                                                                 <tr class="border-[1px] border-darkTheme">
                                                                     <td class="px-4 py-3 text-md text-black font-bold whitespace-nowrap border-[1px] border-darkTheme">{{ $index + 1 }}</td>
                                                                     <td class="px-4 py-3 text-md whitespace-nowrap border-[1px] border-darkTheme">
-                                                                        <h2 class="text-md font-semibold text-black">{{ $data[0] }}</h2>
+                                                                        <h2 class="text-md font-medium text-black">{{ $data[0] }}</h2>
                                                                     </td>
                                                                     <td class="px-4 py-3 text-md text-gray-500 dark:text-gray-300 whitespace-nowrap border-[1px] border-darkTheme">
                                                                         <h2 class="text-md font-normal italic text-black">{{ $data[1] }}</h2>
@@ -872,7 +869,7 @@ The future is in the hands of present. It is said that destiny of a nation is sh
                                                                 <tr class="border-[1px] border-darkTheme">
                                                                     <td class="px-4 py-3 text-md text-black font-bold whitespace-nowrap border-[1px] border-darkTheme">{{ $index + 1 }}</td>
                                                                     <td class="px-4 py-3 text-md whitespace-nowrap border-[1px] border-darkTheme">
-                                                                        <h2 class="text-md font-semibold text-black">{{ $data[0] }}</h2>
+                                                                        <h2 class="text-md font-medium text-black">{{ $data[0] }}</h2>
                                                                     </td>
                                                                     <td class="px-4 py-3 text-md text-gray-500 dark:text-gray-300 whitespace-nowrap border-[1px] border-darkTheme">
                                                                         <h2 class="text-md font-normal italic text-black">{{ $data[1] }}</h2>

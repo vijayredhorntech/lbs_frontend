@@ -1,24 +1,24 @@
 @extends('Layouts.layout')
 @section('content')
-    <div class="w-full flex flex-col items-center lg:pt-[200px] md:pt-[200px] pt-[100px] relative pb-4 px-4">
-        <img class=" lg:h-[300px] md:h-[300px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
+    <div class="w-full flex flex-col items-center lg:pt-[220px] md:pt-[220px] pt-[140px] relative pb-4 px-4">
+        <img class=" lg:h-[200px] md:h-[200px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
              src="{{asset('assets/images/administration/campus.jpg')}}">
-        <div class="w-full lg:h-[300px] md:h-[300px] h-[120px]   bg-black/60 absolute top-0 left-0 z-10">
+        <div class="w-full lg:h-[200px] md:h-[200px] h-[120px]   bg-black/20 absolute top-0 left-0 z-10">
         </div>
-        <div class="lg:w-[80%] md:w-[80%] w-full z-20 flex flex-col-reverse gap-4">
-            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-2">
-                <div class="w-full flex flex-col rounded-md">
-                    <div class="w-full bg-darkTheme flex lg:justify-center md:justify-center justify-between lg:p-3 md:p-3 p-2 rounded-t-md">
-                        <span class="font-semibold lg:text-xl md:text-xl text-md text-white">CONTENT</span>
+        <div class="lg:w-[80%] w-full z-20 flex flex-col-reverse ">
+            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-6 ">
+                <div class="w-full flex flex-col bg-white h-max px-4 py-6 shadow-lg shadow-black/20">
+                    <div class="w-full  flex lg:justify-start md:justify-start justify-between px-2  border-b-[1px] border-b-black/20">
+                        <span class="font-semibold lg:text-xl md:text-xl text-md text-black mb-2">NAAC</span>
                         <button class="bg-white text-darkTheme px-2 rounded-sm lg:hidden md:hidden block"
                                 onclick=" document.getElementById('naacTabs').classList.toggle('hidden') ">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
-                    <div id="naacTabs" class="w-full lg:flex md:flex hidden flex-col">
+                    <div id="naacTabs" class="w-full lg:flex md:flex hidden flex-col mt-4">
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'COLLEGE-AQAR'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='COLLEGE-AQAR'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='COLLEGE-AQAR'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                             COLLEGE AQAR
                                         </span>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'college-aqar-data'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-aqar-data'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-aqar-data'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                            COLLEGE AQAR DATA
                                         </span>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'college-ssr'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-ssr'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-ssr'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                            COLLEGE SSR
                                         </span>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'college-sar'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-sar'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='college-sar'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                            COLLEGE SAR
                                         </span>
@@ -68,7 +68,7 @@
                         </div>
                          <div class="w-full">
                             <a href="{{route('naac',['type'=>'NIRF'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='NIRF'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='NIRF'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                            NIRF
                                         </span>
@@ -78,10 +78,10 @@
                                 </div>
                             </a>
                         </div>
-              
+
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'BEST-PRACTICES'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='BEST-PRACTICES'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='BEST-PRACTICES'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                            BEST PRACTICES
                                         </span>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('naac',['type'=>'institutional-distinctiveness'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='institutional-distinctiveness'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='institutional-distinctiveness'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                           INSTITUTIONAL DISTINCTIVENESS
                                         </span>
@@ -107,7 +107,7 @@
                         <div class="w-full lg:col-span-3 md:col-span-3 ">
                             <a href="javascript:void(0)"
                                onclick="document.getElementById('iqacSubMeny').classList.toggle('hidden')">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='COMPOSITION'?'text-darkTheme bg-white border-b-[1px] border-b-darkTheme':'text-black bg-lightTheme'}} border-b-[1px] border-b-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between {{$type==='COMPOSITION'?'text-darkTheme bg-white border-b-[1px] border-b-darkTheme':'bg-black/10'}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                         <span>
                                          IQAC
                                         </span>
@@ -118,7 +118,7 @@
                         <div id="iqacSubMeny" class="w-full rounded-t-md  flex flex-col hidden ">
                             <div class="w-full">
                                 <a href="{{route('naac',['type'=>'COMPOSITION'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='COMPOSITION'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='COMPOSITION'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                 <span>
                                    COMPOSITION
                                 </span>
@@ -132,7 +132,7 @@
                             </div>
                             <div class="w-full">
                                 <a href="{{route('naac',['type'=>'MEETINGS'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='MEETINGS'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='MEETINGS'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                 <span>
                                    MEETINGS
                                 </span>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="w-full">
                                 <a href="{{route('naac',['type'=>'MEETINGS-OUTCOMES'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='MEETINGS-OUTCOMES'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='MEETINGS-OUTCOMES'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                 <span>
                                     MEETINGS OUTCOMES
                                 </span>
@@ -156,7 +156,7 @@
                             </div>
                             <div class="w-full">
                                 <a href="{{route('naac',['type'=>'ACTION-TAKEN-REPORT'])}}">
-                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='ACTION-TAKEN-REPORT'?'text-darkTheme bg-white':'text-black bg-lightTheme'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme rounded-b-md text-sm font-semibold transition-colors duration-200">
+                                    <div class=" group px-4 py-2 pl-6 flex h-full justify-between {{$type==='ACTION-TAKEN-REPORT'?'text-darkTheme bg-white':'bg-black/10'}}  border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme rounded-b-md text-sm font-semibold transition-colors duration-200">
                                 <span>
                                      ACTION TAKEN REPORT
                                 </span>
@@ -171,9 +171,9 @@
 
                     </div>
                 </div>
-                <div class="w-full flex flex-col lg:col-span-3 md:col-span-2 shadow-lg shadow-black/30 border-[1px] h-max border-white rounded-md overflow-x-auto bg-white">
+                <div class="w-full h-max flex flex-col lg:col-span-3 md:col-span-2  border-[1px] border-white overflow-x-auto bg-white shadow-lg shadow-black/40">
 
-                    <div class="h-max {{$type==='college-aqar-data'?'hidden':''}}  {{$type==='college-sar'?'hidden':''}} {{$type==='institutional-distinctiveness'?'hidden':''}} w-full bg-white lg:mt-0 md:mt-0 mt-4 lg:py-8 md:py-8 py-0 rounded-b-md">
+                    <div class="w-full bg-white p-6  h-max {{$type==='college-aqar-data'?'hidden':''}}  {{$type==='college-sar'?'hidden':''}} {{$type==='institutional-distinctiveness'?'hidden':''}} ">
                         <section class=" px-4 mx-auto">
                             <div class="w-full flex flex-col">
                                 <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -2051,7 +2051,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'1.3.2.& 1.3.3 EXPERIENTIAL LEARNING 23-24']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download    
+                                                                View/Download
                                                             </a>
                                                         </div>
                                                     </td>
@@ -2111,7 +2111,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'2.2.1 AQAR 2023-24']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download  
+                                                                View/Download
                                                                   </a>
                                                         </div>
                                                     </td>
@@ -2124,7 +2124,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'2.3.1 Educational tours and trainings 2023-24']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download     
+                                                                View/Download
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -2137,7 +2137,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'2.3.2 ICT Tools 2023-24']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download      
+                                                                View/Download
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -2150,7 +2150,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'2.5.1 House exam result Dec.  2023']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download      
+                                                                View/Download
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -2163,7 +2163,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'Evaluation notice 2023 24']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download    
+                                                                View/Download
                                                             </a>
                                                         </div>
                                                     </td>
@@ -2255,7 +2255,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'4.4.2   E-Resources']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download 
+                                                                View/Download
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -2268,7 +2268,7 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'4.2.2 Details of subscriptions']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download    
+                                                                View/Download
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -2281,8 +2281,8 @@
                                                     <td class="px-4 py-1 text-sm whitespace-nowrap border-[1px] border-lightTheme w-[100px]">
                                                         <div class="flex items-center gap-x-6">
                                                             <a href="{{ route('pdfViewer',['folder'=>'naac','file'=>'4.4.2 Maintenance']) }}" target="_blank" class="text-danger font-semibold underline transition-colors duration-200 hover:text-darkTheme focus:outline-none">
-                                                                View/Download  
-                                                                
+                                                                View/Download
+
                                                             </a>
                                                         </div>
                                                     </td>

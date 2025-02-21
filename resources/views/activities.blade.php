@@ -1,26 +1,26 @@
 @extends('Layouts.layout')
 @section('content')
-    <div class="w-full flex flex-col items-center lg:pt-[200px] md:pt-[200px] pt-[100px] relative pb-4 px-4">
-        <img class=" lg:h-[300px] md:h-[300px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
+    <div class="w-full flex flex-col items-center lg:pt-[220px] md:pt-[220px] pt-[140px] relative pb-4 px-4">
+        <img class=" lg:h-[200px] md:h-[200px] h-[120px] w-full object-cover z-10 absolute top-0 left-0"
              src="{{asset('assets/images/administration/campus.jpg')}}">
-        <div class="w-full lg:h-[300px] md:h-[300px] h-[120px]   bg-black/60 absolute top-0 left-0 z-10">
+        <div class="w-full lg:h-[200px] md:h-[200px] h-[120px]   bg-black/20 absolute top-0 left-0 z-10">
         </div>
         <div class="lg:w-[80%] w-full z-20 flex flex-col-reverse gap-4">
-            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-2 ">
+            <div class="w-full grid lg:grid-cols-4 md:grid-cols-3 gap-6 ">
 
 
-                <div class="w-full flex flex-col rounded-md">
-                    <div class="w-full bg-darkTheme flex lg:justify-center md:justify-center justify-between lg:p-3 md:p-3 p-2 rounded-t-md">
-                        <span class="font-semibold lg:text-xl md:text-xl text-md text-white">CONTENT</span>
+                <div class="w-full flex flex-col bg-white h-max px-4 py-6 shadow-lg shadow-black/20">
+                    <div class="w-full  flex lg:justify-start md:justify-start justify-between px-2  border-b-[1px] border-b-black/20">
+                        <span class="font-semibold lg:text-xl md:text-xl text-md text-black mb-2">ACTIVITIES</span>
                         <button class="bg-white text-darkTheme px-2 rounded-sm lg:hidden md:hidden block"
                                 onclick=" document.getElementById('activityTabs').classList.toggle('hidden') ">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
-                    <div id="activityTabs" class="w-full lg:flex md:flex hidden flex-col">
+                    <div id="activityTabs" class="w-full lg:flex md:flex hidden flex-col mt-4">
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'NSS'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='NSS'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='NSS'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>NSS</span>
                                     @if($type==='NSS')
                                         <i class="fa fa-angles-right"></i>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'NCC'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='NCC'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='NCC'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>NCC</span>
                                     @if($type==='NCC')
                                         <i class="fa fa-angles-right"></i>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'ROVERS-RANGERS'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ROVERS-RANGERS'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ROVERS-RANGERS'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>ROVERS & RANGERS</span>
                                     @if($type==='ROVERS-RANGERS')
                                         <i class="fa fa-angles-right"></i>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'RED-RIBBON-CLUB'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='RED-RIBBON-CLUB'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='RED-RIBBON-CLUB'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>RED RIBBON CLUB</span>
                                     @if($type==='RED-RIBBON-CLUB')
                                         <i class="fa fa-angles-right"></i>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'ECO-CLUB'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ECO-CLUB'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ECO-CLUB'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>ECO CLUB</span>
                                     @if($type==='ECO-CLUB')
                                         <i class="fa fa-angles-right"></i>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'REGULAR-ACTIVITIES'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='REGULAR-ACTIVITIES'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='REGULAR-ACTIVITIES'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>REGULAR ACTIVITIES</span>
                                     @if($type==='REGULAR-ACTIVITIES')
                                         <i class="fa fa-angles-right"></i>
@@ -80,7 +80,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'ACADEMIC-ACTIVITIES'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ACADEMIC-ACTIVITIES'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='ACADEMIC-ACTIVITIES'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>ACADEMIC ACTIVITIES</span>
                                     @if($type==='ACADEMIC-ACTIVITIES')
                                         <i class="fa fa-angles-right"></i>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'EXPERIENTIAL-LEARNING'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='EXPERIENTIAL-LEARNING'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='EXPERIENTIAL-LEARNING'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>EXPERIENTIAL LEARNING</span>
                                     @if($type==='EXPERIENTIAL-LEARNING')
                                         <i class="fa fa-angles-right"></i>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'CONFERENCES-SEMINARS-WORKSHOPS'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='CONFERENCES-SEMINARS-WORKSHOPS'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='CONFERENCES-SEMINARS-WORKSHOPS'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-white hover:bg-white  hover:border-black lg:text-md md:text-md text-sm font-medium transition-colors duration-200">
                                     <span>CONFERENCES, SEMINARS & WORKSHOPS</span>
                                     @if($type==='CONFERENCES-SEMINARS-WORKSHOPS')
                                         <i class="fa fa-angles-right"></i>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="w-full">
                             <a href="{{route('activities',['type'=>'WOMEN-GRIEVANCE-REDRESSAL-CELL'])}}">
-                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='WOMEN-GRIEVANCE-REDRESSAL-CELL'?'text-darkTheme bg-white ':'text-black bg-lightTheme '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme rounded-b-md lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
+                                <div class=" group lg:p-3 md:p-3 p-2 flex h-full justify-between  {{$type==='WOMEN-GRIEVANCE-REDRESSAL-CELL'?'text-darkTheme bg-white ':'bg-black/10 '}} border-b-[1px] border-darkTheme hover:bg-white hover:text-darkText hover:border-darkTheme rounded-b-md lg:text-md md:text-md text-sm font-semibold transition-colors duration-200">
                                     <span>WOMEN GRIEVANCE REDRESSAL CELL</span>
                                     @if($type==='WOMEN-GRIEVANCE-REDRESSAL-CELL')
                                         <i class="fa fa-angles-right"></i>
@@ -122,8 +122,8 @@
                 </div>
 
 
-                <div class="w-full flex flex-col lg:col-span-3 md:col-span-2 shadow-lg shadow-black/30 border-[1px] border-white h-max rounded-md overflow-x-auto bg-white">
-                    <div class="w-full bg-white lg:mt-0 md:mt-0 mt-4 lg:py-8 md:py-8 py-0 rounded-b-md">
+                <div class="w-full h-max flex flex-col lg:col-span-3 md:col-span-2  border-[1px] border-white overflow-x-auto bg-white shadow-lg shadow-black/40">
+                    <div class="w-full bg-white p-6  h-max">
                               <section class=" px-4 mx-auto h-max {{$type ==='WOMEN-GRIEVANCE-REDRESSAL-CELL'?'hidden':''}}">
                         <div class="w-full flex flex-col">
                             <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">

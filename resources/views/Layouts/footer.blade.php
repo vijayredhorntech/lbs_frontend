@@ -4,12 +4,15 @@
             <span class="text-lg font-semibold  ">Quick Links</span>
             <ul class="mt-4 text-sm flex flex-col gap-3">
 
-                <a href="{{asset('assets/pdf/Anti_Ragging_Poster.pdf')}}" class="text-lightText hover:text-danger font-semibold transition ease-in duration-2000">
+                <a href="{{ route('pdfViewer',['folder'=>'other','file'=>'Anti_Ragging_Poster']) }}" class="text-lightText hover:text-danger font-semibold transition ease-in duration-2000">
                     <li> <i class="fa fa-angles-right text-danger mr-2"></i>  Anti Ragging Poster</li>
                 </a>
-                <a href="{{asset('assets/pdf/Disaster Management  Plan.pdf')}}" class="text-lightText hover:text-danger font-semibold transition ease-in duration-2000">
+                <a href="{{ route('pdfViewer',['folder'=>'other','file'=>'Disaster_Management_Plan']) }}" class="text-lightText hover:text-danger font-semibold transition ease-in duration-2000">
                     <li> <i class="fa fa-angles-right text-danger mr-2"></i> Disaster Management Plan</li>
                 </a>
+
+
+
             </ul>
         </div>
         <div class="w-full flex flex-col text-white uppercase">
